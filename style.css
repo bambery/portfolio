@@ -1,0 +1,109 @@
+body {
+    --color-grey: #e0d5ce;
+    --color-blue: #30d5f0;
+    --color-green: #9fc629;
+    --color-tan: #f2e19d;
+    --color-dark: #473f39;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.fancy-bg {
+  --s: 70px; /* control the size */
+  --c: #e0d5ce;
+  --_l: #0000 46%,var(--color-grey) 47% 53%,#0000 54%;
+  background:
+    radial-gradient(100% 100% at 100% 100%,var(--_l)) var(--s) var(--s),
+    radial-gradient(100% 100% at 0    0   ,var(--_l)) var(--s) var(--s),
+    radial-gradient(100% 100%,#0000 22%,var(--color-grey) 23% 29%, #0000 30% 34%,var(--color-grey) 35% 41%,#0000 42%)
+    var(--color-blue);
+  background-size: calc(var(--s)*2) calc(var(--s)*2);
+}
+
+.flex-item {
+    width: 80%;
+}
+
+.content {
+    height: 400px;
+    background-color: var(--color-grey);
+    border: 3px solid var(--color-dark);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 5fr 1fr 3fr;
+}
+
+.title-name {
+    font-size: 3.5em;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content-two-across {
+    grid-column: 1 / -1;
+}
+
+.section-header {
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.content-two-across .summary {
+    grid-row: 2 / 3;
+    background-color: yellow;
+}
+
+.content-one-across-left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: pink;
+}
+
+.content-one-across-right {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+    background-color: green;
+}
+.addl {
+    grid-row: 3 / -1;
+    background-color: red;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.keyword {
+    font-weight: bolder;
+}
+
+.selected-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+
+}
+
+.selected-title {
+    font-weight: bolder;
+    font-size: larger;
+    height: 2.5em;
+}
+
+.selected-thumbnails {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
