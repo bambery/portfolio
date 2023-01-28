@@ -7,6 +7,7 @@ body {
     --color-dark: #473f39;
     --font-name: 'Raleway';
     --font-text: 'Montserrat Alternates';
+    --font-numbers: 'Space Mono';
     --section-header-fontsize: 1.2em;
     color: var(--color-dark);
     margin: 0;
@@ -109,6 +110,7 @@ section {
 
 .timeline-date {
     width: 100px;
+    font-family: var(--font-numbers);
 }
 
 .first-word {
@@ -171,6 +173,11 @@ section {
     width: 150px;
     height: 75px;
     background-color: white;
+}
+
+/* this screencap has black bg */
+.covid .thumbnail:last-child {
+    background-color: black;
 }
 
 .thumbnail img {
@@ -243,18 +250,6 @@ section {
     }
 }
 
-
-/*
-@media(max-height:600px){
-    .flex-container {
-        justify-content: flex-start;
-        height: 100%;
-        width:100%;
-        align-items: stretch;
-    }
-
-    .flex-item {
-        width:95%;
-    }
+.personal {
+    padding-bottom: 15px;
 }
-*/
