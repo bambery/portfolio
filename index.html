@@ -10,153 +10,235 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <div class="flex-container fancy-bg">
-        <div class="flex-item">
-            <div class="title-top">
-                Hello, nice to meet you! I'm
-            </div>
-            <div class="title-name">
-                Loren Wszolek
-            </div>
-            <div class="title-bottom">
-                and you can learn a bit about me:
+    <body class="fancy-bg">
+        <div class="flex-container">
+            <div class="flex-friend">
+                <div class="flex-item title">
+                    <div class="title-small">
+                        Hello, nice to meet you! I'm
+                    </div>
+                    <div class="title-name">
+                        Lauren Wszolek
+                    </div>
+                </div>
+                <div id="main" class="flex-item content">
+                    <section>
+                        <div class="section-header resume-header">
+                            <div class="header-name">
+                                Abbreviated Resume
+                            </div>
+                            <div class="header-link">
+                                <a href="./resources/lwszolek-resume.pdf">
+                                    <span class="material-symbols-outlined">
+                                        list_alt
+                                    </span>
+                                    <span>
+                                        Download Resume
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="timeline" class="section-content">
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    2008-2017
+                                </div>
+                                <div class="first-word">
+                                    Worked</div>
+                                <div class="timeline-description">as a Full-Stack Software Engineer coding front and backend apps using <span class="keyword">Javascript</span>, <span class="keyword">NodeJS</span>, <span class="keyword">Ruby</span>, <span class="keyword">Python</span>, <span class="keyword">HTML</span>, <span class="keyword">CSS</span>, and <span class="keyword">SQL</span>, as well as <span class="keyword">architecting data models</span> and <span class="keyword">designing APIs</span>.
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    2018
+                                </div>
+                                <div class="first-word">
+                                    Mentored
+                                </div>
+                                <div class="timeline-description">
+                                    second-career adult women with She's Coding in Seattle to transition into development
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    2019-2022
+                                </div>
+                                <div class="first-word">
+                                    Graduated
+                                </div>
+                                <div class="timeline-description">
+                                    2022 from <span class="keyword">Roosevelt University</span>, double major Computer Science and Mathematics with Honors in Math
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section>
+                        <div class="section-header selected-header">
+                            <div class="header-name">
+                                Selected Work from 2022-2023
+                            </div>
+                            <div class="header-link">
+                                <a href="https://github.com/bambery/"><img src="./resources/github-mark.png">Github</a>
+                            </div>
+                        </div>
+                        <div class="section-content selected-work">
+                            <div class="selected-container cantor">
+                                <div class="selected-title">
+                                    React App Generating Asymmetric Cantor-like Sets
+                                </div>
+                                <div class="selected-thumbnails">
+                                    <div class="thumbnail">
+                                        <a href="https://bambery.github.io/cantor_3-4_react/">
+                                            <img src="./resources/cantor-thumb-1.png" alt="Thumbnail showing a screencap of the Cantor Set Application">
+                                        </a>
+                                    </div>
+                                    <div class="thumbnail">
+                                        <a href="https://bambery.github.io/cantor_3-4_react/">
+                                            <img src="./resources/cantor-thumb-2.png" alt="Thumbnail showing a screencap of the Cantor Set Application">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="selected-description">
+                                    <div class="selected-links">
+                                        <table>
+                                            <tr>
+                                                <th colspan=2>
+                                                    Expanding the work from a 2022 paper, generate custom asymmetrical Cantor-like sets by choosing the segments to remove. React app drawing on HTML canvas, results downloadable via CSV.
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan=2 align="center">
+                                                    <div class="hr-thin">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    Working Demonstration:
+                                                </td>
+                                                <td>
+                                                    <a href="https://bambery.github.io/cantor_3-4_react/">https://bambery.github.io/cantor_3-4_react</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    Paper:
+                                                </td>
+                                                <td>
+                                                    <a href="https://arxiv.org/pdf/2211.08664.pdf">A Non-Centered, Asymmetric Cantor-like Set</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    Repository:
+                                                </td>
+                                                <td>
+                                                    <a href="https://github.com/bambery/cantor_3-4_react"> https://github.com/bambery/cantor_3-4_react</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    About Cantor Sets:
+                                                </td>
+                                                <td>
+                                                    <a href="https://blogs.scientificamerican.com/roots-of-unity/a-few-of-my-favorite-spaces-the-cantor-set/">A Few of My Favorite Spaces: The Cantor Set (SciAm)</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="selected-separator">
+                            <div class="selected-container covid">
+                                <div class="selected-title">
+                                    Time-Series COVID Death Dataset, with CBSA Nodes, Flights/Adjacency Edges
+                                </div>
+                                <div class="selected-thumbnails">
+                                    <div class="thumbnail">
+                                        <a href="https://docs.google.com/document/d/1_DcsPpbk8-WekyRNpDN0htOQCxp5NIp5uk9T5acMc9E/edit?usp=sharing">
+                                            <img src="./resources/covid-thumb-1.png" alt="Thumbnail showing a screencap of the Cantor Set Application">
+                                        </a>
+                                    </div>
+                                    <div class="thumbnail">
+                                        <a href="https://github.com/bambery/metric-oranges">
+                                            <img src="./resources/covid-thumb-2.png" alt="Thumbnail showing a screencap of the Cantor Set Application">
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="selected-description">
+                                    <div class="selected-links">
+                                        <table>
+                                            <tr>
+                                                <th colspan=2>
+                                                    Data project in Python to identify, evaluate, consume, clean, and integrate public sources for COVID deaths and geographic-economic regions of USA, producing in-depth analysis, process, & dataset.
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan=2>
+                                                    <div class="hr-thin">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    Paper on Data Generation:
+                                                </td>
+                                                <td>
+                                                    <a href="https://docs.google.com/document/d/1_DcsPpbk8-WekyRNpDN0htOQCxp5NIp5uk9T5acMc9E/edit?usp=sharing">US Adjacencies, COVID Deaths Time Series, and Domestic Flight Routes</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    COVID Data Set:
+                                                </td>
+                                                <td>
+                                                    <a href="https://github.com/bambery/metric-oranges/tree/main/outputs">Download Data</a> (<a href="https://github.com/bambery/metric-oranges/blob/main/outputs/contents.txt">description</a>)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    Original Paper:
+                                                </td>
+                                                <td>
+                                                    <a href="https://arxiv.org/abs/2011.00616v1"</a>Similarity Between Points in Metric Measure Spaces</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="label">
+                                                    Repository:
+                                                </td>
+                                                <td>
+                                                    <a href="https://github.com/bambery/metric-oranges">https://github.com/bambery/metric-oranges</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="section-header personal-header">
+                            <div class="header-name">
+                                Personal Information
+                            </div>
+                            <div class="header-link">
+                                <a href="mailto:lauren@bettercriticals.mozmail.com"><span class="material-symbols-outlined">mail</span>Email me</a>
+                            </div>
+                        </div>
+                        <div class="personal">
+                            I prefer the Oxford Comma and plan to pursue a Masters in Computer Science. My first lines of Javascript were written to hack Skynet (not a joke). I run a small amateur detective agency, but the cases have dried up during the pandemic.
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
-        <div class="flex-item content">
-            <div class="content-two-across summary">
-                <div class="timeline">
-                    <div class="timeline-date">
-                        2008-2017
-                    </div>
-                    <div class="timeline-description">
-                        <span class="first-word">Worked</span> as a Full-Stack Software Engineer coding front and backend apps using <span class="keyword">Javascript</span>, <span class="keyword">NodeJS</span>, <span class="keyword">Ruby</span>, <span class="keyword">Python</span>, <span class="keyword">HTML</span>, <span class="keyword">CSS</span> and <span class="keyword">PSQL</span>, as well as <span class="keyword">architecting data models</span> and <span class="keyword">designing APIs</span>.
-                    </div>
 
-                    <div class="timeline-date">
-                        2018
-                    </div>
-                    <div class="timeline-description">
-                        <span class="first-word">Mentored</span> second-career adult women with She's Coding in Seattle to transition into development
-                    </div>
-
-                    <div class="timeline-date">
-                        2019-2022
-                    </div>
-                    <div class="timeline-description">
-                        <span class="first-word">Graduated</span> 2022 from Roosevelt University, double major Computer Science and Mathematics, with Honors in Math
-                    </div>
-                </div>
-            </div>
-            <div class="content-one-across-left selected-container">
-                <div>
-                    <div class="selected-title">
-                        React App Generating Asymmetric Cantor-like Sets
-                    </div>
-                    <div class="selected-thumbnails">
-                        <div class="thumbnail">
-                            <img src="http://placekitten.com/150/75" alt="Thumbnail showing a screencap of the Cantor Set Application">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="http://placekitten.com/150/75" alt="Thumbnail showing a screencap of the Cantor Set Application">
-                        </div>
-                    </div>
-                    <div class="selected-description">
-                        <div class="selected-links">
-                            <table>
-                                <tr>
-                                    <th colspan=2>
-                                        Short summary of whatever I am describing, how cool
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Working Demonstration:
-                                    </td>
-                                    <td>
-                                        https://bambery.github.io/cantor_3-4_react/
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Paper:
-                                    </td>
-                                    <td>
-                                        https://arxiv.org/pdf/2211.08664.pdf
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Repository:
-                                    </td>
-                                    <td>
-                                        https://github.com/bambery/cantor_3-4_react
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-one-across-right selected-container">
-                <div>
-                    <div class="selected-title">
-                        Time-Series COVID Death Dataset, using CBSA as Nodes and Flights and Adjacency as Edges
-                    </div>
-                    <div class="selected-thumbnails">
-                        <div class="thumbnail">
-                            <img src="http://placekitten.com/150/75" alt="Thumbnail showing a screencap of the Cantor Set Application">
-                        </div>
-                        <div class="thumbnail">
-                            <img src="http://placekitten.com/150/75" alt="Thumbnail showing a screencap of the Cantor Set Application">
-                        </div>
-                    </div>
-                    <div class="selected-description">
-                        <div class="selected-links">
-                            <table>
-                                <tr>
-                                    <th colspan=2>
-                                        Short summary of whatever I am describing, how cool
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Paper on Data Generation:
-                                    </td>
-                                    <td>
-                                        https://bambery.github.io/cantor_3-4_react/
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        COVID Data Set:
-                                    </td>
-                                    <td>
-                                        https://arxiv.org/pdf/2211.08664.pdf
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Original Paper:
-                                    </td>
-                                    <td>
-                                        https://github.com/bambery/cantor_3-4_react
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-two-across addl">
-                <div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</body>
+    </body>
 </html>
