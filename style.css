@@ -8,7 +8,8 @@ body {
     --font-name: 'Raleway';
     --font-text: 'Montserrat Alternates';
     --font-numbers: 'Space Mono';
-    --section-header-fontsize: 1.2em;
+    --fontsize-section-header: 1.2em;
+    --fontsize-title: 3.5em;
     color: var(--color-dark);
     margin: 0;
     padding: 0;
@@ -35,15 +36,23 @@ section {
   background-size: calc(var(--s)*2) calc(var(--s)*2);
 }
 
+
 .title {
     font-weight: bold;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: baseline;
+    height: 100%;
 }
+
+.title-small {
+    flex: 1 1 auto;
+    text-align: right;
+}
+
 .title-name {
-    font-size: 3.5em;
+    font-size: var(--fontsize-title);
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
     padding-left: .1em;
@@ -91,7 +100,7 @@ section {
     align-items: center;
     background-color: var(--color-green);
     font-weight: bold;
-    font-size: var(--section-header-fontsize);
+    font-size: var(--fontsize-section-header);
     font-family: var(--font-text);
     gap: 30px;
 }
@@ -119,17 +128,20 @@ section {
 }
 
 .header-link img {
-    height: var(--section-header-fontsize);
+    height: var(--fontsize-section-header);
     object-fit: contain;
     filter: invert(19%) sepia(10%) saturate(167%) hue-rotate(343deg) brightness(63%) contrast(76%);
 }
 
 /* styles for each section's content */
+
 .section-content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+/* abbreviated resume section */
 
 .timeline-item {
     display: flex;
@@ -159,6 +171,8 @@ section {
     padding: 0 0 0 5px;
 }
 
+/* selected work section */
+
 .selected-work{
     gap: 10px;
     justify-content: space-between;
@@ -179,7 +193,7 @@ section {
     height: auto;
     border: 5px dotted;
     border-style: none none dotted;
-    color: var(--color-blue);
+    color: var(--color-green);
 }
 
 .selected-separator span {
@@ -257,6 +271,13 @@ section {
     font-weight: bolder;
 }
 
+/* personal section */
+
+.personal {
+    padding-bottom: 15px;
+}
+
+/* responsive layout */
 
 @media (max-width: 1030px){
     .selected-title{
@@ -264,7 +285,7 @@ section {
     }
 }
 
-@media (max-width:800px){
+@media (max-width:800px) {
     .flex-container {
         justify-content: flex-start;
         height: 100%;
@@ -273,7 +294,7 @@ section {
     }
 
     .flex-item {
-        width:95%;
+        width: 95%;
     }
 
     .timeline-date {
@@ -297,6 +318,10 @@ section {
         font-size: 2em;
     }
 
+    .title-small {
+        align-self: baseline;
+        width: 100%;
+    }
 }
 
 @media (max-height: 825px){
@@ -305,6 +330,3 @@ section {
     }
 }
 
-.personal {
-    padding-bottom: 15px;
-}
