@@ -63,9 +63,8 @@ section {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
     font-family: var(--font-name);
-    margin: 15px 0 20px 0;
+    margin: 15px 0 60px 0;
 }
 
 .flex-friend {
@@ -134,7 +133,7 @@ section {
 
 /* styles for each section's content */
 
-.section-content {
+.section-content-flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -178,7 +177,7 @@ section {
     padding-top: 0;
 }
 
-.selected-work a {
+.section-text a {
     color: var(--color-dark-green);
 }
 
@@ -221,11 +220,11 @@ section {
 .selected-title {
     font-weight: bolder;
     font-size: larger;
-    height: 2.5em;
+    min-height: 2.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
 }
 
 .selected-thumbnails {
@@ -249,14 +248,30 @@ section {
     vertical-align: top;
 }
 
+.thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0;
+}
+
 .thumbnail {
     width: 150px;
     height: 75px;
     background-color: white;
 }
 
+.thumbnail-description {
+    min-height: 1em;
+    text-align: center;
+    width: 150px;
+    font-size: .8em;
+    font-style: italic;
+}
+
 /* this screencap has black bg */
-.covid .thumbnail:last-child {
+.thumbnail-black {
     background-color: black;
 }
 
@@ -268,6 +283,16 @@ section {
 
 .keyword {
     font-weight: bolder;
+}
+
+/* UX study */
+.ux-study {
+    display: inline-grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.ux-study .selected-title {
+    align-items: flex-start;
 }
 
 /* personal section */
@@ -322,7 +347,13 @@ section {
         width: 100%;
     }
 
-    .section-content {
+    .section-content-flex {
         flex-direction: column;
+    }
+
+    .ux-study {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
