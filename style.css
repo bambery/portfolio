@@ -295,6 +295,10 @@ section {
     align-items: flex-start;
 }
 
+.gs-documents {
+    margin-top: 0px;
+}
+
 /* personal section */
 
 .personal {
