@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lauren Wszolek Resume</title>
+<style>
+  :root { --accent: #2f6f3e; --ink: #222; --muted: #666; }
+
+  @page { size: letter; margin: 0.85in 0.5in 0.5in; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    font-size: 11pt;
+    line-height: 1.38;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Screen: emulate a page so what you see ~ what prints */
+  .page {
+    max-width: 7.5in;
+    margin: 24px auto;
+    padding: 0.5in;
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(0,0,0,.15);
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; padding: 0; max-width: none; box-shadow: none; }
+  }
+
+  header { margin-bottom: 10px; }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25pt;
+    line-height: 1;
+    margin: 0 0 4px;
+    letter-spacing: .5px;
+  }
+  .contact { font-size: 9.5pt; color: var(--muted); }
+  .contact a { color: var(--accent); text-decoration: none; }
+  .tagline { font-style: italic; color: var(--muted); margin-top: 3px; font-size: 9.5pt; }
+
+  h2 {
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 2px;
+    margin: 13px 0 6px;
+  }
+
+  .summary { margin: 8px 0 0; }
+
+  .skills p { margin: 2px 0; }
+
+  .job { margin-bottom: 10px; break-inside: avoid; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .role { font-weight: 700; }
+  .dates { color: var(--muted); font-style: italic; font-size: 9.5pt; white-space: nowrap; }
+  .job-summary { margin: 2px 0 6px; }
+
+  ul { margin: 6px 0 2px; padding-left: 26px; }
+  li { margin: 4px 0; }
+
+  a { color: var(--accent); }
+
+  /* keep a section header from being orphaned at a page bottom */
+  h2 { break-after: avoid; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Lauren Wszolek</h1>
+    <div class="contact">
+      <a href="mailto:lauren@bettercriticals.mozmail.com">lauren@bettercriticals.mozmail.com</a> &nbsp;·&nbsp;
+      <a href="https://bambery.github.io/portfolio/">bambery.github.io/portfolio</a> &nbsp;·&nbsp;
+      <a href="https://github.com/bambery">github.com/bambery</a>
+    </div>
+    <div class="tagline">Software Engineer, UX Naturalist, Diversity Devotee, Wikipedia Editor</div>
+  </header>
+
+  <p class="summary">Software engineer with a mathematics background and a decade of experience in fintech, e-commerce, and insurance, working mostly on the backend: data models, APIs, and the payment and vendor integrations that have to be right every time. Now a Senior Software Engineer at Kin Insurance.</p>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> Ruby, JavaScript, Python, SQL, HTML, CSS</p>
+    <p><strong>Tools &amp; frameworks:</strong> Rails, Sidekiq, RSpec, PostgreSQL, React, Node.js, Datadog, Git</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="role">Kin Insurance, Senior Software Engineer</span>
+        <span class="dates">Remote · 2024-Present</span>
+      </div>
+      <p class="job-summary">Core backend engineer on an in-house system for issuing claims reserves and payments, built on top of a third-party claims platform.</p>
+      <ul>
+        <li>Designed and built the core that allocates a claim's money: reserving funds, paying the right accounts, and enforcing adjusters' authority limits before money moves</li>
+        <li>Replaced a fragile, vendor-dependent approach to payment history with a data model we own, making each payment's audit trail (what changed, why, and when) queryable and reliable</li>
+        <li>Moved claim, coverage, and transaction status syncing from polling to webhooks, cutting load and latency. Added request auditing and made the jobs idempotent</li>
+        <li>Made schema changes on big payments tables without downtime, using staged backfills and dual-write column renames so production never ended up half-migrated</li>
+        <li>Chased down about 190 rate-limit errors a day against a third-party API and cleared them with per-call throttling and per-entity caching</li>
+        <li>Worked with the project manager to dig into the real business needs and turn them into a phased technical plan. Designed and documented the architecture, split the work into incremental tickets, ran knowledge-sharing sessions for the team, worked with QE to map out the test scenarios and document how to test each step, and wrote on-call runbooks</li>
+        <li>Lead the team's logging and monitoring effort ("Log Squad"): run regular working sessions, write the tasks that close observability gaps, set logging standards, and build Datadog dashboards that track API usage and alert on unusual patterns, including one for the incoming and outgoing API traffic with our claims vendor</li>
+        <li>One of the busiest reviewers on the team (450+ PRs), and often first to dig into production issues. Wrote shared test-data tooling and gave regular internal talks</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="role">Ritani, Software Engineer</span>
+        <span class="dates">Seattle · 2017</span>
+      </div>
+      <p class="job-summary">Led the frontend team moving a legacy Rails 3.2 app to a responsive React single-page app backed by a new API.</p>
+      <ul>
+        <li>Rebuilt the frontend into modular, testable components</li>
+        <li>Ran frontend planning and worked with design and the API team on the responsive flows</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="role">Groupon Getaways, Software Engineer</span>
+        <span class="dates">Seattle · 2014-2016</span>
+      </div>
+      <p class="job-summary">Launched and internationalized a travel-inventory web app used by internal ops and outside hotel clients.</p>
+      <ul>
+        <li>Moved a legacy app to a client-side JavaScript front end against a large service-oriented backend</li>
+        <li>Centralized the pricing and money math, and fixed date handling so it worked across locales</li>
+        <li>Ran user studies and automated deal creation to get products out faster</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="role">Groupon, Software Engineer</span>
+        <span class="dates">Chicago · 2014</span>
+      </div>
+      <p class="job-summary">Built internal tooling and monitoring for purchase-funnel systems (Rails, MySQL, PHP), and gathered requirements for an internal request-routing tool.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="role">Girl Scouts (GSGCNWI), Interactive Technology Engineer</span>
+        <span class="dates">Chicago · 2013-2014</span>
+      </div>
+      <p class="job-summary">Redesigned the member portal to improve retention and smooth out friction points.</p>
+      <ul>
+        <li>Merged several data sources into one normalized user database, and ran the UX research behind it (interviews, card sorts, personas) along with the wireframes</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="role">Enova Financial, Sr. Software Engineer and Sr. UX</span>
+        <span class="dates">Chicago · 2008-2012</span>
+      </div>
+      <ul>
+        <li>Managed a team of usability engineers and built an internal Rails app for monitoring and code releases</li>
+        <li>Did requirements gathering, wireframing, and TDD on customer-facing financial products</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Projects (2022-2023)</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="role">Asymmetric Cantor-like Set Generator</span>
+        <span class="dates">React · JavaScript</span>
+      </div>
+      <p class="job-summary">A React and HTML-canvas app that builds custom asymmetric Cantor-like sets from the segments you choose to remove, with CSV export. Grew out of my 2022 undergrad research.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="role">US COVID-Mortality Data Analysis</span>
+        <span class="dates">Python</span>
+      </div>
+      <p class="job-summary">A Python pipeline that pulls and reshapes US COVID-mortality data across county adjacencies, time series, and domestic flight routes, and packages it into reusable data products.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="job">
+      <div class="job-head">
+        <span class="role">Roosevelt University, B.S. in Computer Science and Mathematics</span>
+        <span class="dates">Chicago, graduated 2022</span>
+      </div>
+      <ul>
+        <li>Honors in Mathematics</li>
+        <li>Research in real analysis and measure theory (asymmetric Cantor-like sets), COVID-mortality data work, and a biodiversity project with the Chicago Field Museum. Links on my <a href="https://bambery.github.io/portfolio/">portfolio</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Accomplishments</h2>
+    <ul>
+      <li>Regular speaker at Kin Insurance's internal Claims engineering talks (2024-2026)</li>
+      <li>Mentored career-changing women getting into development through She's Coding</li>
+      <li>Gave an EmberJS meetup talk, "Selecting Selects in Ember" (2016)</li>
+      <li>Won Groupon's Spring 2016 hackathon (category: Make Something Better)</li>
+      <li>Acting Secretary, BQAC nonprofit (2023)</li>
+    </ul>
+  </section>
+
+</div>
+</body>
+</html>

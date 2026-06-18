@@ -141,6 +141,12 @@ section {
 
 /* abbreviated resume section */
 
+#timeline {
+    /* display newest-first while keeping the HTML in chronological order */
+    flex-direction: column-reverse;
+    gap: 8px;
+}
+
 .timeline-item {
     display: flex;
     flex-direction: row;
@@ -151,7 +157,7 @@ section {
 }
 
 .timeline-date {
-    width: 100px;
+    width: 125px;
     font-family: var(--font-numbers);
 }
 
@@ -159,7 +165,7 @@ section {
     font-weight: bold;
     flex: 1 1 1;
     font-size: 1.2em;
-    width: 100px;
+    width: 110px;
     text-align: end;
 }
 
